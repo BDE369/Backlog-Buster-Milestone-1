@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Backlog</title>
+  <link rel="stylesheet" href="backlog.css">
+</head>
+<body class="backlog" data-page="backlog">
+  <span class="helper">To add a game click add game</span>
+  <header>My Backlog</header>
+
+  <div class="controls">
+    <button class="sortBtn" data-sort="title">Title A - Z</button>
+    <button class="sortBtn" data-sort="recent">Recently Added</button>
+    <button class="sortBtn" data-sort="console">Sort by Console</button>
+    <button class="sortBtn" data-sort="genre">Sort by Genre</button>
+
+    <div class="addCompound" id="addGameBtn">
+      <div class="addCircle">+</div>
+      <span class="addLabel">Add<br>Game</span>
+    </div>
+  </div>
+
+  <div id="gameGrid"></div>
+
+  <!-- Add Modal -->
+  <div id="addModal">
+    <form class="modalBox" id="addForm">
+      <button type="button" class="close" id="closeModal">✕</button>
+      <h2>Add Game to Backlog</h2>
+      <input id="titleInput" placeholder="Game Title" required>
+      <select id="platformInput" required>
+        <option value="">Game Console</option>
+        <option>PC</option>
+        <option>PlayStation</option>
+        <option>Xbox</option>
+        <option>Switch</option>
+      </select>
+      <select id="statusInput" required>
+        <option value="">Play Status</option>
+        <option>Not Started</option>
+        <option>Playing</option>
+        <option>Completed</option>
+      </select>
+      <textarea id="descInput" placeholder="Description"></textarea>
+      <button type="submit">Add to my Backlog</button>
+    </form>
+  </div>
+
+  <template id="cardTmpl">
+    <div class="gameCard">
+      <img src="" alt="cover">
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

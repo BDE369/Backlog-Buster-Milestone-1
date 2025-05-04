@@ -1,0 +1,117 @@
+/* Landing page makeover to match provided screenshot */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Press+Start+2P&display=swap');
+
+:root{
+  --neon:#6aff74;
+}
+
+body.landing{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#000;
+  color:#fff;
+  font-family:'Playfair Display', serif;
+  overflow:auto;
+}
+
+/* Blurred background image */
+body.landing::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url('assets/bg.jpg') center/cover no-repeat;
+  filter:blur(4px) brightness(0.45);
+  z-index:-2;
+}
+
+/* Main bordered container */
+.landingFrame{
+  
+  padding:1.5rem;
+  max-width:1100px;
+  width:95%;
+  margin:auto;
+  background:transparent;
+  position:relative;
+}
+
+/* Logo */
+.logoText{
+  font-family:'Press Start 2P', monospace;
+  font-size:3rem;
+  color:var(--neon);
+  text-align:center;
+  margin:0 0 1rem;
+}
+
+/* Tagline in dark box */
+.tagline{
+  background:rgba(0,0,0,0.7);
+  padding:2rem 1rem;
+  text-align:center;
+  font-size:2.5rem;
+  line-height:1.2;
+  margin-bottom:2.5rem;
+}
+
+/* Login form */
+.loginWrap{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  width:320px;
+  margin:0 auto 3rem;
+  gap:1rem;
+  font-size:1.1rem;
+}
+.loginWrap label{
+  width:100%;
+}
+.loginWrap input{
+  width:100%;
+  padding:.5rem;
+  background:#eee;
+  border:none;
+}
+.loginWrap button{
+  align-self:center;
+  padding:.5rem 2rem;
+  background:var(--neon);
+  border:none;
+  cursor:pointer;
+  font-family:'Press Start 2P', monospace;
+}
+.loginWrap p{
+  font-size:.95rem;
+  margin:0;
+}
+.loginWrap a{color:var(--neon); text-decoration:none;}
+.loginWrap a:hover{text-decoration:underline;}
+
+/* Two feature columns */
+.features{
+  display:flex;
+  justify-content:space-between;
+  gap:2rem;
+}
+.feature{
+  width:48%;
+  text-align:center;
+  font-size:1.6rem;
+}
+.feature img{
+  margin-top:1rem;
+  width:100%;
+  height:auto;
+  
+}
+
+/* Responsive tweak */
+@media(max-width:768px){
+  .tagline{font-size:2rem;}
+  .features{flex-direction:column;align-items:center;}
+  .feature{width:85%;}
+}

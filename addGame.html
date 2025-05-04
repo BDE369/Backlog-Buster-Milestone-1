@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="addGame">
+
+<header>
+  <button class="backBtn" id="backBtn">←</button>
+  <h1>Add Game</h1>
+</header>
+
+<main>
+  <form id="addForm">
+    <label>Game Title
+      <input id="titleInput" required>
+    </label>
+    <label>Platform
+      <select id="platformInput" required>
+        <option value="">Select</option>
+        <option>PC</option>
+        <option>PlayStation</option>
+        <option>Xbox</option>
+        <option>Switch</option>
+      </select>
+    </label>
+    <label>Description (optional)
+      <input id="descInput">
+    </label>
+    <button type="submit">Save</button>
+  </form>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
