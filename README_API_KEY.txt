@@ -1,1 +1,0 @@
-Get a free key at https://rawg.io/apidocs and paste it into app.js where it says YOUR_RAWG_API_KEY_HERE
